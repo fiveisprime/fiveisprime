@@ -1,50 +1,61 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report:
+- Version change: [template] → 1.0.0
+- Added sections: All principles and governance established
+- Templates requiring updates: All templates reviewed ✅
+- Follow-up TODOs: RATIFICATION_DATE marked as TODO
+-->
+
+# FiveIsPrime Personal Landing Page Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Component-First Architecture
+Every feature MUST be built as reusable React components with TypeScript interfaces.
+Components MUST be self-contained, independently testable, and properly documented.
+No business logic in JSX - use custom hooks and services for complex state management.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Accessibility & Performance (NON-NEGOTIABLE)
+All components MUST meet WCAG 2.1 AA standards with proper ARIA attributes and semantic HTML.
+Performance MUST achieve Lighthouse scores: 90+ Performance, 100 Accessibility, 100 Best Practices, 90+ SEO.
+Images MUST be optimized, lazy-loaded, and include proper alt text.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Test-First Development
+TDD mandatory: Component tests written → Functionality approved → Tests fail → Then implement.
+Unit tests for all custom hooks, integration tests for user interactions.
+Visual regression testing for UI components using automated screenshot comparison.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Responsive Design Standards
+Mobile-first responsive design MUST work flawlessly on all device sizes (320px to 4K).
+Touch targets MUST be minimum 44px, readable fonts minimum 16px on mobile.
+Progressive enhancement - core functionality MUST work without JavaScript.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Azure Static Web Apps Integration
+Deployment MUST use Azure Static Web Apps with automated CI/CD from GitHub.
+Environment variables for API endpoints MUST be configured in Azure portal.
+Custom domains and SSL certificates MUST be properly configured through Azure.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Technology Stack Requirements
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+**Core Stack**: React 18+ with TypeScript, Vite for build tooling, Azure Static Web Apps for hosting.
+**Styling**: CSS Modules or Styled Components, no inline styles except for dynamic values.
+**Testing**: Vitest for unit tests, React Testing Library for component tests, Playwright for E2E.
+**Code Quality**: ESLint, Prettier, Husky pre-commit hooks, strict TypeScript configuration.
+**Performance**: Bundle analysis, code splitting, lazy loading for non-critical components.
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+## Development Workflow
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+**Branch Strategy**: Feature branches from main, PR reviews required before merge.
+**Code Reviews**: All PRs MUST pass automated tests, accessibility checks, and peer review.
+**Quality Gates**: Pre-commit hooks for linting/formatting, CI pipeline for tests and builds.
+**Deployment**: Automatic deployment to staging on PR creation, production on merge to main.
+**Monitoring**: Application Insights integration for performance monitoring and error tracking.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+Constitution supersedes all other development practices and coding standards.
+Amendments require documentation of rationale, impact assessment, and migration plan.
+All development decisions MUST verify compliance with these principles.
+Performance and accessibility violations MUST be justified or rejected.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: TODO(RATIFICATION_DATE): Original adoption date unknown | **Last Amended**: 2025-10-06
