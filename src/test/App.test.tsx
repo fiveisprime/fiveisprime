@@ -49,7 +49,7 @@ describe('App Integration', () => {
 
         // Check for key personal information
         expect(screen.getByText('Matt Hernandez')).toBeInTheDocument()
-        expect(screen.getByText(/senior software engineer/i)).toBeInTheDocument()
+        expect(screen.getByText(/Principal Product Manager/i)).toBeInTheDocument()
 
         // Check for skills
         expect(screen.getByText('JavaScript/TypeScript')).toBeInTheDocument()
